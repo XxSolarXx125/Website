@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/api/scan", "dest": "/pages/api/scan.js" }
+  ]
+}
