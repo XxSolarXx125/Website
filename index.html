@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Security Checker</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container glow">
+    <h1 class="fade-in">Code Security Checker 🔍</h1>
+    <p class="fade-in">Upload a file and we'll scan it for suspicious code like webhooks, malware, and more.</p>
+
+    <input type="file" id="codeFile" accept=".js,.py,.txt,.html,.css" />
+    <div class="btn-group">
+      <button onclick="scanFile()">Scan</button>
+      <button onclick="downloadResults()">Download Report</button>
+      <button onclick="toggleSettings()">Settings ⚙️</button>
+    </div>
+
+    <div id="result" class="fade-in"></div>
+
+    <div id="settingsPanel" class="settings-panel">
+      <h3>Settings</h3>
+      <label><input type="checkbox" id="checkTokens" checked> Detect Tokens</label><br>
+      <label><input type="checkbox" id="checkWebhook" checked> Detect Webhooks</label><br>
+      <label><input type="checkbox" id="checkEval" checked> Detect Eval/Exec</label><br>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
